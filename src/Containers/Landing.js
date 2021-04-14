@@ -8,6 +8,7 @@ const Landing = () => {
             <video autoplay muted loop  >
                 <source src={landingvideo} type="video/mp4" />
             </video>
+            <button> Come on in! Let's find out!</button>
         </div>
     )
 }
