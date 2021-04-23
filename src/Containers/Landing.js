@@ -1,15 +1,15 @@
 import { getElementError } from '@testing-library/dom'
 import React from 'react'
-import landingvideo from '../Videos/landingvideo.mp4'
+// import landingvideo from '../Videos/landingvideo.mp4'
+import ghosted from '../Videos/ghosted.gif'
 import styled from 'styled-components'
 
 
 const Landing = () => {
     return (
         <div>
-            <LandingVideo autoplay muted loop >
-                <source src={landingvideo} type="video/mp4" />
-            </LandingVideo>
+            <BackgroundImage  src={ghosted} alt="Was I Ghosted?" />
+               
             <EnterButton > Come on in! Let's find out!</EnterButton>
         </div>
     )
@@ -17,19 +17,9 @@ const Landing = () => {
 
 export default Landing
 
-const LandingVideo = styled.video `
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  `
-// const LandingDiv = styled.div `
-//     height: 100%
-//     display: flex;
-//     flex-flow: row-reverse column-reverse;
-// `
+const BackgroundImage = styled.img `
+  background-size: cover;
+`
 
 
 const EnterButton = styled.button`

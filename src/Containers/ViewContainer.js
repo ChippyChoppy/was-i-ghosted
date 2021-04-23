@@ -5,7 +5,7 @@ import QuestionsContainer from './QuestionsContainer'
 const ViewContainer = () => {
     return (
         <div>
-            {/* <Landing /> */}
+            <Landing />
             <QuestionsContainer />
         </div>
     )
