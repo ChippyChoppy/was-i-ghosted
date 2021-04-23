@@ -19,6 +19,8 @@ const Questions = () => {
             <option value="yes">Yes</option>
             <option value="no">No</option>
         </select>
+        <br/>
+        <button>Was I ghosted?</button>
         </form>
     )
 }
