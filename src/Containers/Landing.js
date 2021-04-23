@@ -1,26 +1,42 @@
 import { getElementError } from '@testing-library/dom'
 import React from 'react'
 // import landingvideo from '../Videos/landingvideo.mp4'
-import ghosted from '../Videos/ghosted.gif'
+import ghosted from '../Images/ghosted.gif'
 import styled from 'styled-components'
 
 
 const Landing = () => {
-    return (
-        <div>
-            <BackgroundImage  src={ghosted} alt="Was I Ghosted?" />
-               
-            <EnterButton > Come on in! Let's find out!</EnterButton>
-        </div>
-    )
+  return (
+
+    <Bg>
+      <BackgroundImage src={ghosted} alt="blurry shiny hearts" />
+      <EnterButton > Come on in! Let's find out!</EnterButton>
+    </Bg>
+
+  )
 }
 
 export default Landing
 
-const BackgroundImage = styled.img `
-  background-size: cover;
+const BackgroundImage = styled.img`
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 `
 
+const Bg = styled.div`
+  background-image: cover;
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+`
 
 const EnterButton = styled.button`
   position: fixed;
