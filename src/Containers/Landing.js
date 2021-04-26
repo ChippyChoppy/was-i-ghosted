@@ -10,7 +10,7 @@ const Landing = () => {
 
     <Bg>
       <BackgroundImage src={ghosted} alt="blurry shiny hearts" />
-      <EnterButton > Come on in! Let's find out!</EnterButton>
+      <button > Come on in! Let's find out!</button>
     </Bg>
 
   )
@@ -19,7 +19,9 @@ const Landing = () => {
 export default Landing
 
 const BackgroundImage = styled.img`
-  position: absolute; 
+  background-image: cover;
+  position: fixed; 
+  ${'' /* position: absolute;  */}
   top: 0; 
   left: 0; 
   right: 0; 
@@ -30,16 +32,14 @@ const BackgroundImage = styled.img`
 `
 
 const Bg = styled.div`
-  background-image: cover;
-  position: fixed; 
-  top: -50%; 
+  
+  ${'' /* top: -50%; 
   left: -50%; 
   width: 200%; 
-  height: 200%;
+  height: 200%; */}
 `
 
 const EnterButton = styled.button`
-  position: fixed;
   height: 35px;
   text-align: center;
   display: flex;
