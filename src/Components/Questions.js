@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Questions = () => {
+const Questions = ({isGhosted}) => {
     const [dates, setDates] = useState("once")
     const [kiss, setKiss] = useState("heck yes!")
     const [talk, setTalk] = useState("yes")
@@ -16,6 +16,14 @@ const Questions = () => {
 
     const talkHandler = (e) => {
         setTalk(e.target.value)
+    }
+
+    const ghostHandler = (e) => {
+        e.preventDefault()
+        if (talk === "yes" && kiss === "nope" && dates === "once" ) {
+            isGhosted = true
+        }
+        console.log(isGhosted)
     }
     
     return (
@@ -38,7 +46,7 @@ const Questions = () => {
             <option value="no">No</option>
         </select>
         <br/>
-        <button>Was I ghosted?</button>
+        <button onClick={ghostHandler} >Was I ghosted?</button>
         </form>
         </div>
     )
