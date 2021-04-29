@@ -18,10 +18,10 @@ const ViewContainer = () => {
                     <Landing />
                 </Route>
                 <Route path='/questions'>
-                    <QuestionsContainer isGhosted={setGhosted} />
+                    <QuestionsContainer isGhosted={setGhosted} ghostState={ghosted} />
                 </Route>
                 <Route path='/results'>
-                    {ghosted ? <Results resultsArr={ghostedArray} /> : <Results resultsArr={notGhostedArray} />}
+                    {ghosted ? <Results isGhosted={ghosted} resultsArr={ghostedArray} /> : <Results isGhosted={ghosted} resultsArr={notGhostedArray} />}
                 </Route>
                 
 

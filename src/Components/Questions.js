@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 
-const Questions = ({isGhosted}) => {
+const Questions = ({ isGhosted, ghostState }) => {
     const history = useHistory()
     const [dates, setDates] = useState("once")
     const [kiss, setKiss] = useState("heck yes!")
@@ -21,12 +21,19 @@ const Questions = ({isGhosted}) => {
 
     const ghostHandler = (e) => {
         e.preventDefault()
-        if (talk === "yes" && kiss === "nope" && dates === "once" ) {
-            isGhosted = true
+        if (talk === "yes" && kiss === "nope" && dates === "once" || talk === "no" ) {
+            isGhosted(ghostState = false)
             history.push('/results')
-        }
+        } else {
+            isGhosted(ghostState = true)
+            history.push('/results')
+        } 
+        // else {
+        //     isGhosted(ghostState = false)
+        //     history.push('/results')
+        // }
         
-        console.log(isGhosted)
+        console.log(ghostState)
     }
     
     return (
