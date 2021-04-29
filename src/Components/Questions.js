@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const Questions = ({isGhosted}) => {
     const [dates, setDates] = useState("once")
@@ -21,8 +22,9 @@ const Questions = ({isGhosted}) => {
     const ghostHandler = (e) => {
         e.preventDefault()
         if (talk === "yes" && kiss === "nope" && dates === "once" ) {
-            isGhosted = true
+           <Link to={{state: {isGhosted: true }}} />
         }
+        
         console.log(isGhosted)
     }
     
