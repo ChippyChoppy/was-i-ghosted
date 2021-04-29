@@ -1,9 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-const Results = () => {
+const Results = ({resultsArr}) => {
+console.log(resultsArr )
+
+    const ghostedResults = () => {
+        // const randomQuotes = Math.floor(Math.random() * resultsArr.length - 1)
+        // const quoteDisplay = 
+        return resultsArr[Math.floor(Math.random() * resultsArr.length)]
+    }
+
     return (
         <div>
-            <h1>ghosted</h1>
+            <h1>Not ghosted</h1>
+            <p>{ghostedResults()}</p>
+            <button onClick={ghostedResults}>Validate me again plz</button>
         </div>
     )
 }

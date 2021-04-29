@@ -21,7 +21,7 @@ const ViewContainer = () => {
                     <QuestionsContainer isGhosted={setGhosted} />
                 </Route>
                 <Route path='/results'>
-                    {ghosted ? <Results ghosted={ghostedArray} /> : <Results ghosted={notGhostedArray} />}
+                    {ghosted ? <Results resultsArr={ghostedArray} /> : <Results resultsArr={notGhostedArray} />}
                 </Route>
                 
 
