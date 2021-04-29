@@ -3,14 +3,21 @@ import React from 'react'
 // import landingvideo from '../Videos/landingvideo.mp4'
 import ghosted from '../Images/ghosted.gif'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
 
 const Landing = () => {
+  const history = useHistory()
+
+  const buttonClick = () => {
+    history.push('/questions')
+  }
+
   return (
 
     <Bg>
       <BackgroundImage src={ghosted} alt="blurry shiny hearts" />
-      <button > Come on in! Let's find out!</button>
+      <button onClick={buttonClick}> Come on in! Let's find out!</button>
     </Bg>
 
   )

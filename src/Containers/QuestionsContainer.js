@@ -2,7 +2,6 @@ import React from 'react'
 import Questions from '../Components/Questions'
 
 const QuestionsContainer = ({isGhosted}) => {
-    console.log(isGhosted)
     return (
         <div>
             <h1>questions</h1>

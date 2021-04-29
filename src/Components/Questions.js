@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const Questions = ({isGhosted}) => {
+    const history = useHistory()
     const [dates, setDates] = useState("once")
     const [kiss, setKiss] = useState("heck yes!")
     const [talk, setTalk] = useState("yes")
-    console.log(dates, kiss, talk)
 
     const dateHandler = (e) => {
         setDates(e.target.value)
@@ -22,7 +22,8 @@ const Questions = ({isGhosted}) => {
     const ghostHandler = (e) => {
         e.preventDefault()
         if (talk === "yes" && kiss === "nope" && dates === "once" ) {
-           <Link to={{state: {isGhosted: true }}} />
+            isGhosted = true
+            history.push('/results')
         }
         
         console.log(isGhosted)
