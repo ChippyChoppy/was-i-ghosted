@@ -11,6 +11,7 @@ const ViewContainer = () => {
     let ghostedArray = ["sucks", "to", "be", "you"]
     let notGhostedArray = ["you", "don't", "suck", "they", "do"]
 
+
     return (
         <>
             <Switch>
