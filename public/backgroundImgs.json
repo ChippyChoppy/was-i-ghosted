@@ -1,0 +1,10 @@
+export const backgroundImages = [
+    {
+        imgUrl : "images/TWATiles.png",
+        alt : "close up photo of small circular tile"
+    }, 
+    {
+        imgUrl : "images/TWAWaves.png"
+        alt : ""
+    }
+]
