@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import RandomBackgroundImage from '../Components/BackgroundImage'
 import { backgroundImages } from './JBackgroundImgs'
 import styled from 'styled-components'
 
@@ -18,24 +17,55 @@ const Results = ({ resultsArr, isGhosted }) => {
 
 
     return (
-        <Background style={{
+        <Main style={{
             backgroundImage: `url("${backgroundImg.imgUrl}")`
         }}>
             {/* <RandomBackgroundImage getImage={backgroundImg}/> */}
-            <h1>{isGhosted ? "Ghosted" : "Not Ghosted"}</h1>
-            <p>{affirmation}</p>
-            <button onClick={ghostedResults}>Validate me again plz</button>
-            <button onClick={() => history.push('/questions')}>back</button>
-        </Background>
+            <Heading>{isGhosted ? "You were ghosted" : "You weren't ghosted!"}</Heading>
+            <Affirmation>{affirmation}</Affirmation>
+            <Button onClick={ghostedResults}>Validate me again plz</Button>
+            <Button onClick={() => history.push('/questions')}>back</Button>
+        </Main>
     )
 }
 
 export default Results
 
-const Background = styled.div `
-height: auto;
-width: 100vw;
+const Main = styled.div `
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
+align-items: flex-start;
+height: 100%;
+width: auto;
+overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
-object-fit: cover;
+background-size: cover;
+`
+
+const Heading = styled.h1 `
+background-color: pink;
+color: gray;
+width: 100%;
+height: 100px;
+text-align: center;
+vertical-align: middle;
+margin: 20px 150px 50px;
+padding: 50px;
+font-size: 5em;
+`
+
+const Affirmation = styled.p `
+border: 2px solid black;
+background-color: gray;
+color: pink;
+width: 48%;
+height: auto;
+margin: 45px;
+`
+
+const Button = styled.button `
+width: 20%;
+height: 25%;
 `

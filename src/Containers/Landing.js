@@ -13,9 +13,10 @@ const Landing = () => {
 
   return (
 
-    <Bg>
-      <BackgroundImage src={ghosted} alt="blurry shiny hearts" />
-      <button onClick={buttonClick}> Come on in! Let's find out!</button>
+    <Bg style={{ backgroundImage: `url("${ghosted}")` }}>
+      <Button onClick={buttonClick}> 
+      Come on in! Let's find out!
+      </Button>
     </Bg>
 
   )
@@ -23,23 +24,20 @@ const Landing = () => {
 
 export default Landing
 
-const BackgroundImage = styled.img`
-  height: auto;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-`
-
 const Bg = styled.div`
-  
-  ${'' /* top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%; */}
+display: flex;
+flex-flow: row wrap;
+justify-content: flex-end;
+align-items: flex-end;
+height: 100%;
+width: auto;
+overflow: hidden;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 `
 
-const EnterButton = styled.button`
+const Button = styled.button`
   height: 35px;
   text-align: center;
   display: flex;
