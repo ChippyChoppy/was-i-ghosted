@@ -1,6 +1,4 @@
-import { getElementError } from '@testing-library/dom'
 import React from 'react'
-// import landingvideo from '../Videos/landingvideo.mp4'
 import ghosted from '../Images/ghosted.gif'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
@@ -26,16 +24,11 @@ const Landing = () => {
 export default Landing
 
 const BackgroundImage = styled.img`
-  background-image: cover;
-  position: fixed; 
-  ${'' /* position: absolute;  */}
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+  height: auto;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
 `
 
 const Bg = styled.div`

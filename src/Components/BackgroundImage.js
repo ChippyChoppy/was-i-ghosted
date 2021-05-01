@@ -1,26 +1,29 @@
 import React, { useState } from 'react'
-import { backgroundImages } from './JBackgroundImgs'
+// import { backgroundImages } from './JBackgroundImgs'
 import styled from 'styled-components'
 
-const RandomBackgroundImage = () => {
-    const [backgroundImg, setBackgroundImg] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
+const RandomBackgroundImage = ( {getImage }) => {
 
-    console.log(backgroundImg.imgUrl)
+    console.log(getImage)
     return (
-        <div>
-            <Background src={backgroundImg.imgUrl} alt={backgroundImg.alt} />
-            this is a photo
-        </div>
+        <Default>
+            <Background src={getImage.imgUrl} alt={getImage.alt} />
+        </Default>
     )
 }
 
 export default RandomBackgroundImage
 
+const Default = styled.div `
+    position: center
+    background-color: black;
+`
+
 const Background = styled.img `
-height: 100vh;
+height: auto;
 width: 100vw;
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover;
+object-fit: cover;
 `
 // style={{ backgroundImage: `url({backgroundImg.imgUrl})`}}
