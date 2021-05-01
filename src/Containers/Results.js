@@ -18,7 +18,7 @@ const Results = ({ resultsArr, isGhosted }) => {
 
 
     return (
-        <div style={{
+        <Background style={{
             backgroundImage: `url("${backgroundImg.imgUrl}")`
         }}>
             {/* <RandomBackgroundImage getImage={backgroundImg}/> */}
@@ -26,8 +26,16 @@ const Results = ({ resultsArr, isGhosted }) => {
             <p>{affirmation}</p>
             <button onClick={ghostedResults}>Validate me again plz</button>
             <button onClick={() => history.push('/questions')}>back</button>
-        </div>
+        </Background>
     )
 }
 
 export default Results
+
+const Background = styled.div `
+height: auto;
+width: 100vw;
+background-position: center;
+background-repeat: no-repeat;
+object-fit: cover;
+`
