@@ -9,18 +9,31 @@ const Results = ({ resultsArr, isGhosted }) => {
     console.log(resultsArr.length, isGhosted)
     const [backgroundImg, setBackgroundImg] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
 
-
     const ghostedResults = () => {
         setAffirmation(resultsArr[Math.floor(Math.random() * resultsArr.length)])
         setBackgroundImg(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
     }
+    console.log(backgroundImg)
 
+    let fireworksArray = []
+
+    fetch("https://api.unsplash.com/search/photos?page=1&query=fireworks", {
+        headers: {
+            Authorization:
+                'Client-ID 5sTdeOlkmh46kJ2rOPqdr5RzHVFdcPoT8oemq80RP8A'
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.results)
+            fireworksArray = data.results
+            console.log(fireworksArray)
+        })
 
     return (
         <Main style={{
             backgroundImage: `url("${backgroundImg.imgUrl}")`
         }}>
-            {/* <RandomBackgroundImage getImage={backgroundImg}/> */}
             <Heading>
                 {isGhosted ? "You were ghosted" : "You weren't ghosted!"}
             </Heading>

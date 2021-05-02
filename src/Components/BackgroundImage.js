@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const RandomBackgroundImage = ( {getImage }) => {
+    fetch("https://api.unsplash.com/search/photos?page=1&query=fireworks")
+        .then(response => response.json())
+        .then(array => console.log(array))
 
     console.log(getImage)
     return (
