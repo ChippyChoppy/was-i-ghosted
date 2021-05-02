@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { backgroundImages } from './JBackgroundImgs'
+import { backgroundImages } from './JSONBackgroundImgs'
 import styled from 'styled-components'
 
 const Results = ({ resultsArr, isGhosted }) => {
