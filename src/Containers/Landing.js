@@ -1,6 +1,5 @@
 import React from 'react'
-import ghosties from '../Images/GhostieGiphy.gif'
-import hearts from '../Images/ghostedbackground.png'
+import hearts from '../Images/GhostieGiphyBackground.gif'
 import question from '../Images/GhostedLandingType.png'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
@@ -16,7 +15,6 @@ const Landing = () => {
   return (
 
     <Bg style={{ backgroundImage: `url("${hearts}")` }}>
-      <Ghosties src={ghosties} />
       <WasI src={question} />
       <Button onClick={buttonClick}> 
       Come on in! Let's find out!
@@ -27,31 +25,25 @@ const Landing = () => {
 }
 
 export default Landing
-const Ghosties = styled.img `
-max-width: 50%;
-align-self: right;
-margin: 0px 30px 0px 0px;
-`
 
 const WasI = styled.img `
 max-width: 65%;
-align-self: flex-start;
-margin: 0px 0px 25px 0px;
+height: 50%;
+margin: 0px 0px 75px 0px;
 `
-
 
 const Bg = styled.div`
 display: flex;
 flex-flow: row wrap;
-justify-content: flex-end;
-${'' /* align-items: flex-end; */}
-height: 99%;
+justify-content: space-evenly;
+align-items: flex-end;
+height: 100%;
 width: auto;
 overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-border: 5px solid red;
+${'' /* border: 5px solid red; */}
 `
 
 const Button = styled.button`
@@ -64,6 +56,6 @@ box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
 width: 25%;
 height: 125px;
 font-size: 2.3vw;
-align-self: flex-end;
-margin: 0px 45px 45px 0px
+${'' /* align-self: flex-end; */}
+margin: 0px 45px 90px 0px
 `

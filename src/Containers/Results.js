@@ -80,7 +80,7 @@ text-shadow: 3px 3px 3px #281920;
 text-align: center;
 vertical-align: middle;
 width: 40%;
-height: 50%;
+height: 350px;
 margin: 10x;
 font-size: 3vw;
 `
@@ -92,7 +92,7 @@ text-shadow: 3px 3px 3px #281920;
 border: 8px ridge #b7647e;
 border-radius: 75px;
 box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
-margin: 0px 0px 25px ;
+
 width: 100%;
 height: 125px;
 font-size: 2.3vw;
@@ -102,7 +102,9 @@ const ButtonContainer = styled.div `
 display: flex;
 ${'' /* border: 5px solid red; */}
 flex-flow: column wrap;
-justify-content: center;
+justify-content: space-evenly;
+align-items: center;
+height: 350px;
 width: 35%;
 
 `
