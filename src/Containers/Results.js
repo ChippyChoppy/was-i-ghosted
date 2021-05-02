@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Results = ({ resultsArr, isGhosted }) => {
     const history = useHistory()
     const [affirmation, setAffirmation] = useState(resultsArr[Math.floor(Math.random() * resultsArr.length)])
-    console.log(resultsArr, isGhosted)
+    console.log(resultsArr.length, isGhosted)
     const [backgroundImg, setBackgroundImg] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
 
 
@@ -54,9 +54,9 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 `
-// radial-gradient(circle, rgba(183,100,126,1) 35%, rgba(171,122,109,1) 70%, rgba(247,198,179,1) 100%);
+
 const Heading = styled.h1`
-background-color: #b7647e;
+background: radial-gradient(circle, rgba(183,100,126,1) 65%, rgba(171,122,109,1) 75%, rgba(247,198,179,1) 100%);
 color: #eee2e0;
 text-shadow: 4px 4px 2px #281920;
 border: 8px ridge #b7647e;
@@ -72,33 +72,37 @@ font-size: 6vw;
 
 const Affirmation = styled.div`
 border: 8px ridge #b7647e;
+background: radial-gradient( rgba(171,122,109,1) 70%, rgba(183,100,126,1) 85%, rgba(247,198,179,1) 100%);
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-color: rgba(171,122,109,1);
-color: pink;
+color: #eee2e0;
+text-shadow: 3px 3px 3px #281920;
+text-align: center;
+vertical-align: middle;
 width: 40%;
-min-height: 30%;
-height: auto;
+height: 50%;
 margin: 10x;
+font-size: 3vw;
 `
 
 const Button = styled.button`
 background: radial-gradient(circle, rgba(183,100,126,1) 35%, rgba(171,122,109,1) 70%, rgba(247,198,179,1) 100%);
 color: #eee2e0;
-text-shadow: 4px 4px 2px #281920;
+text-shadow: 3px 3px 3px #281920;
 border: 8px ridge #b7647e;
 border-radius: 75px;
 box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
-margin: 0px 25px 25px 25px;
-width: 50%;
+margin: 0px 0px 25px ;
+width: 100%;
 height: 125px;
 font-size: 2.3vw;
 `
 
 const ButtonContainer = styled.div `
 display: flex;
-border: 5px solid red;
+${'' /* border: 5px solid red; */}
 flex-flow: column wrap;
 justify-content: center;
-width: 40%;
+width: 35%;
 
 `

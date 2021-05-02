@@ -3,14 +3,12 @@ import Landing from './Landing'
 import QuestionsContainer from './QuestionsContainer'
 import Results from './Results'
 import { Switch, Route } from 'react-router-dom'
+import { ghostedArray } from './GhostedArray'
+import {notGhostedArray } from './NotGhostedArray'
 
 const ViewContainer = () => {
     const [ghosted, setGhosted] = useState(false)
     console.log(ghosted)
-
-    let ghostedArray = ["sucks", "to", "be", "you"]
-    let notGhostedArray = ["you", "don't", "suck", "they", "do"]
-
 
     return (
         <>

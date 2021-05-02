@@ -38,40 +38,83 @@ const Questions = ({ isGhosted, ghostState }) => {
     }
 
     return (
-        <div>
+        <Main>
             <Questionaire>
-                <form>
+                <Form>
                     <h3>How many times did y'all see each other?</h3>
-                    <select onChange={dateHandler}>
+                    <Selection onChange={dateHandler}>
                         <option value="once">Once</option>
                         <option value="twice">Twice</option>
                         <option value="thrice">Thrice or more</option>
-                    </select>
+                    </Selection>
                     <h3>Did y'all kiss... or more?</h3>
-                    <select onChange={kissHandler}>
+                    <Selection onChange={kissHandler}>
                         <option value="heck yes!">Heck yes!</option>
                         <option value="nope">Nope</option>
-                    </select>
+                    </Selection>
                     <h3>Was contact made or attempted after?</h3>
-                    <select onChange={talkHandler}>
+                    <Selection onChange={talkHandler}>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
-                    </select>
-                </form>
+                    </Selection>
+                </Form>
+                <br></br>
             </Questionaire>
             <Button onClick={ghostHandler} >Was I ghosted?</Button>
-        </div>
+        </Main>
     )
 }
 
 export default Questions
-
-const Questionaire = styled.div `
-border: 4px solid black;
-height: auto;
+const Main = styled.div`
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
+align-items: flex-start;
+height: 65%;
+width: 100%;
+overflow: hidden;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+align-items: center;
+${'' /* border: 5px solid red; */}
 `
 
-const Button = styled.button `
-width: 20%;
-height: 25%;
+const Questionaire = styled.div `
+border: 8px ridge #b7647e;
+background: radial-gradient( rgba(171,122,109,1) 70%, rgba(183,100,126,1) 85%, rgba(247,198,179,1) 100%);
+border-radius: 15px;
+box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-color: rgba(171,122,109,1);
+color: #eee2e0;
+text-shadow: 3px 3px 3px #281920;
+width: 45%;
+margin: 0px 25px
+`
+
+const Form = styled.form `
+margin: 25px;
+`
+
+const Button = styled.button`
+background: radial-gradient(circle, rgba(183,100,126,1) 35%, rgba(171,122,109,1) 70%, rgba(247,198,179,1) 100%);
+color: #eee2e0;
+text-shadow: 3px 3px 3px #281920;
+border: 8px ridge #b7647e;
+border-radius: 75px;
+box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
+width: 35%;
+height: 125px;
+font-size: 2.3vw;
+align-self: flex-end;
+margin: 0px 0px 55px 0px
+`
+
+const Selection = styled.select `
+background-color: #eee2e0;
+color: #281920;
+border-radius: 25px;
+width: 45%;
+font-size: 1.5vw;
+
 `
