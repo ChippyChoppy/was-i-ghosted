@@ -66,6 +66,9 @@ overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+@media (max-width: 320px) {
+    flex-direction: column;
+}
 `
 
 const Heading = styled.h1`
@@ -74,13 +77,18 @@ color: #eee2e0;
 text-shadow: 4px 4px 2px #281920;
 border: 8px ridge #b7647e;
 border-radius: 75px;
-box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
+box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
+width: 100%;
 ${'' /* height: 100px; */}
 text-align: center;
 vertical-align: middle;
 margin: 10px 175px 50px;
 padding: 20px;
 font-size: 6vw;
+@media (max-width: 320px) {
+    width: 70%;
+    margin: 10px;
+}
 `
 
 const Affirmation = styled.div`
@@ -96,6 +104,9 @@ width: 40%;
 height: 350px;
 margin: 10x;
 font-size: 3vw;
+@media (max-width: 320px) {
+    max-height: 35%;
+}
 `
 
 const Button = styled.button`
