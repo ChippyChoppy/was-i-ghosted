@@ -41,18 +41,18 @@ const Questions = ({ isGhosted, ghostState }) => {
         <Main>
             <Questionaire>
                 <Form>
-                    <h3>How many times did y'all see each other?</h3>
+                    <h1>1. How many times did y'all see each other?</h1>
                     <Selection onChange={dateHandler}>
                         <option value="once">Once</option>
                         <option value="twice">Twice</option>
                         <option value="thrice">Thrice or more</option>
                     </Selection>
-                    <h3>Did y'all kiss... or more?</h3>
+                    <h1>2. Did y'all kiss?</h1>
                     <Selection onChange={kissHandler}>
                         <option value="heck yes!">Heck yes!</option>
                         <option value="nope">Nope</option>
                     </Selection>
-                    <h3>Was contact made or attempted after?</h3>
+                    <h1>3. Was contact made or attempted after?</h1>
                     <Selection onChange={talkHandler}>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -93,7 +93,7 @@ margin: 0px 25px
 `
 
 const Form = styled.form `
-margin: 25px;
+margin: 30px;
 `
 
 const Button = styled.button`
@@ -107,14 +107,13 @@ width: 35%;
 height: 125px;
 font-size: 2.3vw;
 align-self: flex-end;
-margin: 0px 0px 55px 0px
+margin: 0px 0px 65px 0px
 `
 
 const Selection = styled.select `
 background-color: #eee2e0;
 color: #281920;
-border-radius: 25px;
+border-radius: 10px;
 width: 45%;
 font-size: 1.5vw;
-
 `
