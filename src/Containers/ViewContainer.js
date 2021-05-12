@@ -13,7 +13,7 @@ const ViewContainer = () => {
     return (
         <>
             <Switch>
-                <Route path='/welcome'>
+                <Route path='/'>
                     <Landing />
                 </Route>
                 <Route path='/questions'>
