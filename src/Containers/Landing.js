@@ -3,6 +3,7 @@ import hearts from '../Images/GhostieGiphyBackground.gif'
 import question from '../Images/GhostedLandingType.png'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
+import cursorGif from '../Images/GhostieGiphy.gif'
 
 
 const Landing = () => {
@@ -16,7 +17,7 @@ const Landing = () => {
 
     <Bg style={{ backgroundImage: `url("${hearts}")` }}>
       <WasI src={question} />
-      <Button onClick={buttonClick}> 
+      <Button onClick={buttonClick} > 
       Come on in! Let's find out!
       </Button>
     </Bg>
@@ -43,7 +44,7 @@ overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-${'' /* border: 5px solid red; */}
+${'' /* border: 5px red; */}
 `
 
 const Button = styled.button`

@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  cursor: pointer;
 }
-
+ 
+button {
+  cursor: pointer;
+}
 
 
