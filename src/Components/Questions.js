@@ -83,31 +83,36 @@ ${'' /* border: 5px solid red; */}
 
 const Questionaire = styled.div `
 border: 8px ridge #b7647e;
-background: radial-gradient( rgba(171,122,109,1) 70%, rgba(183,100,126,1) 85%, rgba(247,198,179,1) 100%);
+background: radial-gradient(circle,rgba(183,100,126,1) 75%,rgba(171,122,109,1) 85%,rgba(247,198,179,1) 100%);
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-color: rgba(171,122,109,1);
 color: #eee2e0;
 text-shadow: 3px 3px 3px #281920;
-width: 45%;
-margin: 0px 25px
+width: 42%;
 `
 
 const Form = styled.form `
-margin: 30px;
+margin: 5% 0% 5% 5%;
+font-family: modesto-text,serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1vw;
 `
 
 const Button = styled.button`
-background: radial-gradient(circle, rgba(183,100,126,1) 35%, rgba(171,122,109,1) 70%, rgba(247,198,179,1) 100%);
-color: #eee2e0;
-text-shadow: 3px 3px 3px #281920;
-border: 8px ridge #b7647e;
-border-radius: 75px;
-box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
-width: 35%;
-height: 125px;
-font-size: 2.3vw;
-align-self: flex-end;
-margin: 0px 0px 65px 0px
+background: radial-gradient(circle,rgba(183,100,126,1) 75%,rgba(171,122,109,1) 85%,rgba(247,198,179,1) 100%);
+    color: #eee2e0;
+    text-shadow: 3px 3px 3px #281920;
+    border: 6px ridge #b7647e;
+    border-radius: 75px;
+    box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
+    width: 35%;
+    font-size: 3.5vw;
+    font-family: modesto-expanded,serif;
+    font-weight: 400;
+    margin: 5% 2% 5% 2%;
+    font-style: normal;
+    padding: 2%;
 `
 
 const Selection = styled.select `
@@ -116,4 +121,7 @@ color: #281920;
 border-radius: 10px;
 width: 45%;
 font-size: 1.5vw;
+font-family: modesto-expanded,serif;
+font-weight: 400;
+font-style: normal;
 `
