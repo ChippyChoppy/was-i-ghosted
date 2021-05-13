@@ -9,5 +9,5 @@ export const ghostedArray = [
     "Be sad for a minute, but that's all they're worth, 60 seconds of sadness.",
     "Redirect that sadness energy into something that makes you feel joy.",
     "Ghosting is a reflection of the ghoster, not the ghostee (which is weird, because do ghosts even have reflections?)",
-    ""
+    "I'm prescribing you one pint of ice cream, then call doctor Tinder in the morning!"
 ]

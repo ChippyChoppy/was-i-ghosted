@@ -4,7 +4,7 @@ import QuestionsContainer from './QuestionsContainer'
 import Results from './Results'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { ghostedArray } from './GhostedArray'
-import {notGhostedArray } from './NotGhostedArray'
+import { notGhostedArray } from './NotGhostedArray'
 
 const ViewContainer = () => {
     const [ghosted, setGhosted] = useState(false)
@@ -13,14 +13,9 @@ const ViewContainer = () => {
     return (
         <>
             <Switch>
-            <Route 
-                exact path="/"
-                render={() => {
-                    return (
-                        <Redirect to="/home" />
-                    )
-                }}
-            />      
+                <Route exact path="/">
+                    <Redirect to="/home" />
+                </Route>
                 <Route path='/home'>
                     <Landing />
                 </Route>
@@ -30,9 +25,9 @@ const ViewContainer = () => {
                 <Route path='/results'>
                     {ghosted ? <Results isGhosted={ghosted} resultsArr={ghostedArray} /> : <Results isGhosted={ghosted} resultsArr={notGhostedArray} />}
                 </Route>
-                
 
-                
+
+
             </Switch>
 
         </>

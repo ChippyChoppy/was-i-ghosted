@@ -72,19 +72,21 @@ background-size: cover;
 `
 
 const Heading = styled.h1`
-background: radial-gradient(circle, rgba(183,100,126,1) 65%, rgba(171,122,109,1) 75%, rgba(247,198,179,1) 100%);
+background: radial-gradient(circle,rgba(183,100,126,1) 75%,rgba(171,122,109,1) 85%,rgba(247,198,179,1) 100%);
 color: #eee2e0;
 text-shadow: 4px 4px 2px #281920;
-border: 8px ridge #b7647e;
+border: 6px ridge #b7647e;
 border-radius: 75px;
-box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
+box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e;
 width: 100%;
-${'' /* height: 100px; */}
 text-align: center;
 vertical-align: middle;
-margin: 10px 175px 50px;
-padding: 20px;
-font-size: 6vw;
+margin: 3% 13% 0%;
+padding: 1.3%;
+font-size: 5vw;
+font-family: modesto-expanded,serif;
+font-weight: 400;
+font-style: normal;
 @media (max-width: 320px) {
     width: 70%;
     margin: 10px;
@@ -92,8 +94,8 @@ font-size: 6vw;
 `
 
 const Affirmation = styled.div`
-border: 8px ridge #b7647e;
-background: radial-gradient( rgba(171,122,109,1) 70%, rgba(183,100,126,1) 85%, rgba(247,198,179,1) 100%);
+border: 6px ridge #b7647e;
+background: radial-gradient( rgba(183,100,126,1) 70%, rgba(171,122,109,1) 85%, rgba(247,198,179,1) 100%);
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-color: rgba(171,122,109,1);
 color: #eee2e0;
@@ -101,25 +103,32 @@ text-shadow: 3px 3px 3px #281920;
 text-align: center;
 vertical-align: middle;
 width: 40%;
-height: 350px;
+min-height: auto;
 margin: 10x;
 font-size: 3vw;
+font-family: modesto-text,serif;
+font-weight: 400;
+font-style: normal;
 @media (max-width: 320px) {
     max-height: 35%;
 }
 `
 
 const Button = styled.button`
-background: radial-gradient(circle, rgba(183,100,126,1) 35%, rgba(171,122,109,1) 70%, rgba(247,198,179,1) 100%);
-color: #eee2e0;
-text-shadow: 3px 3px 3px #281920;
-border: 8px ridge #b7647e;
-border-radius: 75px;
-box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;
-
-width: 100%;
-height: 125px;
-font-size: 2.3vw;
+    background: radial-gradient(circle,rgba(183,100,126,1) 75%,rgba(171,122,109,1) 85%,rgba(247,198,179,1) 100%);
+    color: #eee2e0;
+    text-shadow: 3px 3px 3px #281920;
+    border: 6px ridge #b7647e;
+    border-radius: 75px;
+    box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
+    width: 100%;
+    min-height: 125px;
+    font-size: 1.9vw;
+    font-family: modesto-expanded,serif;
+    font-weight: 400;
+    margin: 5% 2% 0% 2%;
+    font-style: normal;
+    padding: 5%;
 `
 
 const ButtonContainer = styled.div `
@@ -128,7 +137,7 @@ ${'' /* border: 5px solid red; */}
 flex-flow: column wrap;
 justify-content: space-evenly;
 align-items: center;
-height: 350px;
+max-height: 500px;
 width: 35%;
 
 `
