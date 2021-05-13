@@ -66,8 +66,14 @@ overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-@media (max-width: 320px) {
-    flex-direction: column;
+@media (max-width: 1440px) {
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media (max-width: 750px) {
+  justify-content: space-evenly;
 }
 `
 
@@ -87,17 +93,26 @@ font-size: 5vw;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 320px) {
-    width: 70%;
-    margin: 10px;
+@media (max-width: 1440px) {
+    width: 75%;
+    margin: 0%;
+    padding: 3%;
+    font-size: 9vw;
+}
+@media (max-width: 750px) {
+    width: 75%;
+    margin: 0%;
+    padding: 3%;
+    font-size: 10vw;
 }
 `
 
 const Affirmation = styled.div`
 border: 6px ridge #b7647e;
-background: radial-gradient( rgba(183,100,126,1) 70%, rgba(171,122,109,1) 85%, rgba(247,198,179,1) 100%);
+background: radial-gradient( rgba(183,100,126,1) 75%, rgba(171,122,109,1) 85%, rgba(247,198,179,1) 100%);
 border-radius: 15px;
-box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-color: rgba(171,122,109,1);
+box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
+background-color: rgba(171,122,109,1);
 color: #eee2e0;
 text-shadow: 3px 3px 3px #281920;
 text-align: center;
@@ -109,8 +124,15 @@ font-size: 3vw;
 font-family: modesto-text,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 320px) {
-    max-height: 35%;
+@media (max-width: 1440px) {
+    width: 80%;
+    font-size: 5vw;
+    margin: 0%;
+}
+@media (max-width: 750px) {
+    width: 93%;
+    font-size: 7vw;
+    margin: 0%
 }
 `
 
@@ -122,13 +144,25 @@ const Button = styled.button`
     border-radius: 75px;
     box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
     width: 100%;
-    min-height: 125px;
     font-size: 1.9vw;
     font-family: modesto-expanded,serif;
     font-weight: 400;
-    margin: 5% 2% 0% 2%;
     font-style: normal;
+    margin: 5% 2% 0% 2%;
     padding: 5%;
+    @media (max-width: 1440px) {
+        margin: 5% 0% 9% 0%;
+        font-size: 3vw;
+        padding: 4%;
+        width: 45%;
+    }
+    @media (max-width: 750px) {
+        width: 100%;
+        height: auto;
+        font-size: 6vw;
+        padding: 4%;
+        margin: 0%;
+    }
 `
 
 const ButtonContainer = styled.div `
@@ -139,5 +173,16 @@ justify-content: space-evenly;
 align-items: center;
 max-height: 500px;
 width: 35%;
-
+@media (max-width: 1440px) {
+    width: 95%;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+}
+@media (max-width: 750px) {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    width: 88%;
+    height: 33%;
+}
 `
