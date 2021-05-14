@@ -22,7 +22,7 @@ const Questions = ({ isGhosted, ghostState }) => {
 
     const ghostHandler = (e) => {
         e.preventDefault()
-        if (talk === "yes" && kiss === "nope" && dates === "once" || talk === "no") {
+        if ((talk === "yes" && kiss === "nope" && dates === "once") || talk === "no") {
             isGhosted(ghostState = false)
             history.push('/results')
         } else {
