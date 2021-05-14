@@ -4,7 +4,6 @@ import middleBackground from '../Images/ghostielanding1440max.gif'
 import mobileBackground from '../Images/mobileBackground.gif'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-import cursorGif from '../Images/GhostieGiphy.gif'
 
 
 const Landing = () => {
@@ -106,7 +105,6 @@ box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;
 width: 21%;
 height: auto;
 font-size: 2vw;
-${'' /* align-self: flex-end; */}
 margin: 0% 0% 8% 0%;
 padding: 1.75%;
 @media (max-width: 1440px) {
