@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WAS_I_GHOSTED }}'
           channelId: live
           projectId: was-i-ghosted
+          
