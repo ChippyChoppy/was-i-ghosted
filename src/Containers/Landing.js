@@ -5,7 +5,6 @@ import mobileBackground from '../Images/mobileBackground.gif'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 
-
 const Landing = () => {
   const history = useHistory()
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

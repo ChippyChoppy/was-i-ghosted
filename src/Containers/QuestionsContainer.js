@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Questions from '../Components/Questions'
 import brick from '../Images/QuestionsBackground.jpg'
+import midBrick from '../Images/QuestionsMidCentered.png'
+import smallBrick from '../Images/QuestionsMobileBLeft.png'
 import styled from 'styled-components'
 
 const QuestionsContainer = ({isGhosted, ghostState}) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
+    }, []);
+
+    const bricksAndHeart = (windowWidth >= 651 && windowWidth <= 1440 ? midBrick : (windowWidth <= 650 ? smallBrick : brick ))
+
     return (
         <Main style={{
-            backgroundImage: `url("${brick}")`
+            backgroundImage: `url("${bricksAndHeart}")`
         }}>
             <Heading>Were you ghosted?</Heading>
             <Questions isGhosted={isGhosted} ghostState={ghostState} />
@@ -31,6 +48,12 @@ background-size: cover;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
+@media (max-width: 1440px) {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
 `
 // const Heading = styled.h1 `
 // background-color: pink;

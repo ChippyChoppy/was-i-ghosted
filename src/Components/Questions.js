@@ -85,6 +85,9 @@ align-items: center;
     align-items: center;
     justify-content: space-evenly;
 }
+@media (max-width: 750px) {
+    justify-content: space-evenly;
+}
 `
 
 const Questionaire = styled.div `
