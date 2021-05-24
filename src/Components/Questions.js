@@ -81,9 +81,9 @@ background-size: cover;
 align-items: center;
 @media (max-width: 1440px) {
     flex-direction: column;
-    flex-wrap: no-wrap;
-    align-items: center;
-    justify-content: space-evenly;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 @media (max-width: 750px) {
     justify-content: space-evenly;
@@ -102,6 +102,10 @@ width: 42%;
     width: 80%;
     margin: 5%;
 }
+@media (max-width: 750px) {
+    width: 75%;
+    margin: 0%;
+}
 `
 
 const Form = styled.form `
@@ -112,6 +116,10 @@ font-style: normal;
 font-size: 1vw;
 @media (max-width: 1440px) {
     font-size: 3vw;
+}
+@media (max-width: 750px) {
+    font-size: 2vw;
+
 }
 `
 
@@ -147,6 +155,7 @@ font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
 @media (max-width: 1440px) {
-    font-size: 4vw;
+    font-size: 2.5vw;
+    
 }
 `
