@@ -66,6 +66,7 @@ const Questions = ({ isGhosted, ghostState }) => {
 }
 
 export default Questions
+
 const Main = styled.div`
 display: flex;
 flex-flow: row wrap;
@@ -78,7 +79,12 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 align-items: center;
-${'' /* border: 5px solid red; */}
+@media (max-width: 1440px) {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
 `
 
 const Questionaire = styled.div `
