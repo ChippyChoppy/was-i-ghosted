@@ -83,9 +83,17 @@ font-size: 5vw;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 320px) {
-    width: 70%;
-    margin: 10px;
+@media (max-width: 1440px) {
+    width: 75%;
+    margin: 0%;
+    padding: 3%;
+    font-size: 9vw;
+}
+@media(max-width: 750px) {
+    width: 75%;
+    margin: 0%;
+    padding: 3%;
+    font-size: 10vw;
 }
 `
 
