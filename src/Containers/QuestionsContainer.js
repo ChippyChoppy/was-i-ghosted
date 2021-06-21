@@ -19,7 +19,7 @@ const QuestionsContainer = ({isGhosted, ghostState}) => {
         }
     }, []);
 
-    const bricksAndHeart = (windowWidth >= 651 && windowWidth <= 1440 ? midBrick : (windowWidth <= 650 ? smallBrick : brick ))
+    const bricksAndHeart = (windowWidth >= 651 && windowWidth <= 980 ? midBrick : (windowWidth <= 650 ? smallBrick : brick ))
 
     return (
         <Main style={{
