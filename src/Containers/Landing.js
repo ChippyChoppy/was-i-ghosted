@@ -25,7 +25,7 @@ const Landing = () => {
     }
   }, []);
 
-  const ghostsAndHearts = (windowWidth >=651 && windowWidth <= 900 ? middleBackground : (windowWidth <= 650 ? mobileBackground : wideBackground ))
+  const ghostsAndHearts = (windowWidth >=651 && windowWidth <= 1000 ? middleBackground : (windowWidth <= 650 ? mobileBackground : wideBackground ))
 // if (windowWidth <= 650) {
 //     ghostsAndHearts = mobileBackground
 //   } else {
