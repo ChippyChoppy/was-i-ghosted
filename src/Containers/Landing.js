@@ -25,7 +25,7 @@ const Landing = () => {
     }
   }, []);
 
-  const ghostsAndHearts = (windowWidth >=651 && windowWidth <= 1000 ? middleBackground : (windowWidth <= 650 ? mobileBackground : wideBackground ))
+  const ghostsAndHearts = (windowWidth >=651 && windowWidth <= 900 ? middleBackground : (windowWidth <= 650 ? mobileBackground : wideBackground ))
 // if (windowWidth <= 650) {
 //     ghostsAndHearts = mobileBackground
 //   } else {
@@ -57,7 +57,7 @@ overflow: hidden;
 background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
   flex-direction: column;
   flex-wrap: no-wrap;
   align-items: center;
@@ -72,13 +72,13 @@ const Title = styled.p`
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-max-width: 65%;
+max-width: 60%;
 height: auto;
 margin: 0% 0% 6% 0%;
 font-size: 12vw;
 color: #b7647e;
 text-shadow: 8px 8px 6px #281920;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     margin: 0% 0% 6% 0%;
     text-align: center;
 }
@@ -106,7 +106,7 @@ height: auto;
 font-size: 2vw;
 margin: 0% 0% 8% 0%;
 padding: 1.75%;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
   width: 70%;
   padding: 3% 0%;
   font-size: 5vw;
