@@ -79,7 +79,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 align-items: center;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     flex-direction: column;
   flex-wrap: no-wrap;
   align-items: center;
@@ -98,7 +98,7 @@ box-shadow: 0 4px 8px 0 #eee2e0, 0 6px 20px 0 #eee2e0;width: 100%;background-col
 color: #eee2e0;
 text-shadow: 3px 3px 3px #281920;
 width: 42%;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 80%;
     margin: 5%;
 }
@@ -114,7 +114,7 @@ font-family: modesto-text,serif;
 font-weight: 400;
 font-style: normal;
 font-size: 1vw;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     font-size: 3vw;
 }
 @media (max-width: 750px) {
@@ -137,7 +137,7 @@ background: radial-gradient(circle,rgba(183,100,126,1) 75%,rgba(171,122,109,1) 8
     margin: 5% 2% 5% 2%;
     font-style: normal;
     padding: 2%;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 65%;
     font-size: 7vw;
     padding: 4%;
@@ -154,7 +154,7 @@ font-size: 1.5vw;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     font-size: 2.5vw;
     
 }

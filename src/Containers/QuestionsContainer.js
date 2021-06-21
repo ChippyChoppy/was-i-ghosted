@@ -19,7 +19,7 @@ const QuestionsContainer = ({isGhosted, ghostState}) => {
         }
     }, []);
 
-    const bricksAndHeart = (windowWidth >= 651 && windowWidth <= 980 ? midBrick : (windowWidth <= 650 ? smallBrick : brick ))
+    const bricksAndHeart = (windowWidth >= 651 && windowWidth <= 1000 ? midBrick : (windowWidth <= 650 ? smallBrick : brick ))
 
     return (
         <Main style={{
@@ -48,7 +48,7 @@ background-size: cover;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     flex-direction: column;
     flex-wrap: no-wrap;
     align-items: center;
@@ -83,7 +83,7 @@ font-size: 5vw;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 75%;
     margin: 0%;
     padding: 3%;
