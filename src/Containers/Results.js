@@ -66,7 +66,7 @@ overflow: hidden;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
   flex-direction: column;
   flex-wrap: no-wrap;
   align-items: center;
@@ -93,7 +93,7 @@ font-size: 5vw;
 font-family: modesto-expanded,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 75%;
     margin: 0%;
     padding: 3%;
@@ -124,7 +124,7 @@ font-size: 3vw;
 font-family: modesto-text,serif;
 font-weight: 400;
 font-style: normal;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 80%;
     font-size: 5vw;
     margin: 0%;
@@ -150,7 +150,7 @@ const Button = styled.button`
     font-style: normal;
     margin: 5% 2% 0% 2%;
     padding: 5%;
-    @media (max-width: 1440px) {
+    @media (max-width: 1000px) {
         margin: 5% 0% 9% 0%;
         font-size: 3vw;
         padding: 4%;
@@ -173,7 +173,7 @@ justify-content: space-evenly;
 align-items: center;
 max-height: 500px;
 width: 35%;
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     width: 95%;
     flex-direction: row;
     flex-wrap: no-wrap;
