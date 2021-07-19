@@ -74,7 +74,7 @@ justify-content: space-evenly;
 align-items: flex-start;
 height: 65%;
 width: 100%;
-overflow: hidden;
+overflow: hidden; bb
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
